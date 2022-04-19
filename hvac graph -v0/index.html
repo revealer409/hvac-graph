@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Career Map</title>
+	<meta name="geo.region" content="US-DC">
+	<meta property="og:image" content="images/logo-solar-career-map-icon.png">
+	<meta property="og:image:height" content="435">
+	<meta property="og:image:width" content="435">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:locale" content="en_us">
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/scm-icons.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="mask-icon" href="fonts/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="apple-mobile-web-app-title" content="Climate Careers">
+	<meta name="application-name" content="Climate Careers">
+	<meta name="msapplication-TileColor" content="#b91d47">
+	<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="shortcut icon" href="favicon.ico">
+	<style> 
+		.header,.footer {
+		 min-height: 60px;
+		  text-align: center; 
+		  color: white;
+		  font-size: 30px;
+		
+		}
+		.header{
+		  position: relative;
+		   left: 0;
+		   top: 0;
+		   width: 100%;
+		   background: #0E136F;
+		}
+		.footer{
+		  position: fixed;
+		   left: 0;
+		   bottom: 0;
+		   width: 100%;
+		   background: #EFEFEF ;
+		}
+		.logo{   
+		  position: absolute;
+		  right: 10px;
+		  top:10px; 
+		}
+		.logo .image{
+		  pointer-events: none;
+		}
+		.map .row{
+			display: flex;
+			justify-content: center;
+			align-self: center;
+		}
+		</style>
+</head>
+
+<body class="preload">
+
+
+	<main id="main">
+		<div class="header">
+			<a class="logo"   href="javasicript:void(0)"> <img class=" image" src="images/logo.png" alt="logo" unselectable="on">  </a>
+		   
+			</div>
+		<div class="container map">
+			<div class="row">
+
+				<div id="map" class="col-md-9">
+					<div class="routes">
+						<ul class="tabs clear vert-match">
+							<li class="tab">
+								<a href="#" data-slug="advancement-routes" data-type="freeform"
+									class="route-item active vert-match-box-1">
+									<div class="vcenter">Advancement Routes</div>
+								</a>
+							</li>
+							<li class="tab">
+								<a href="#" data-slug="sample-multi-sector-routes" data-type="routeParent"
+									class="route-item  vert-match-box-1">
+									<div class="vcenter">Sample Multi-Sector Routes</div>
+								</a>
+							</li>
+							<li class="tab">
+								<a href="#" data-slug="green-jobs" data-type="jobList"
+									data-joblist="residential-service-technician|commercial-service-technician|stationary-engineer|journey-level-hvac-technician|journey-level-refrigeration-technician|equipment-manufacturer-representative|controls-installer|building-automated-systems-trainee|building-automated-systems-technician|senior-operations-systems-analyst|building-automation-systems-engineer|building-automation-systems-manager|test-and-balance-technician|commissioning-specialist|energy-analyst|hvac-instructor|energy-engineer"
+									class="route-item  vert-match-box-1">
+									<div class="vcenter">Green Jobs</div>
+								</a>
+							</li>
+						</ul>
+						<div class="description">
+							<div class="row tab-content active" data-slug="advancement-routes">
+								<div class="text col-md-12">
+									<p>The HVAC/R industry is exploding with jobs and opportunities; this map explores
+										40 of them. An ambitious worker could progress <em>within</em> any of these
+										occupations, or seek the skills and credentials to advance <em>between</em>
+										them. Click any dot to find out more.</p>
+								</div>
+							</div>
+							<div class="row tab-content " data-slug="sample-multi-sector-routes">
+								<div class="text col-md-8">
+									<p>There are many ways to pursue evolving interests or new opportunities in the
+										HVAC/R industry. These wide-ranging sample career routes are intended to suggest
+										affinity and possibility; each would entail significant intermediate sequences
+										of work and learning. Click a path on the right to explore sample advancement
+										sequence.</p>
+								</div>
+								<div class="subroutes col-md-4">
+									<ul>
+										<li><a href="#" data-slug="residential-commercial" data-type="careerPath"
+												data-careerpath="residential-installer|residential-service-technician|commercial-service-technician|commercial-service-manager"
+												data-tooltips="|||" class="route-item subroute">Residential ►
+												Commercial</a></li>
+										<li><a href="#" data-slug="commercial-design-engineering" data-type="careerPath"
+												data-careerpath="commercial-trainee|building-automated-systems-trainee|test-and-balance-technician|energy-analyst"
+												data-tooltips="|||" class="route-item subroute">Commercial ► Design &
+												Engineering</a></li>
+										<li><a href="#" data-slug="sales-marketing-automated-controls"
+												data-type="careerPath"
+												data-careerpath="warehouse-associate|tradesperson|building-automated-systems-trainee|building-automated-systems-technician"
+												data-tooltips="|||" class="route-item subroute">Sales & Marketing ►
+												Automated Controls</a></li>
+										<li><a href="#" data-slug="automated-controls-design-engineering"
+												data-type="careerPath"
+												data-careerpath="controls-installer|apprentice|stationary-engineer|project-manager"
+												data-tooltips="|||" class="route-item subroute">Automated Controls ►
+												Design & Engineering</a></li>
+										<li><a href="#" data-slug="commercial-automated-controls" data-type="careerPath"
+												data-careerpath="apprentice|journey-level-hvac-technician|building-automated-systems-technician|senior-operations-systems-analyst"
+												data-tooltips="|||" class="route-item subroute">Commercial ► Automated
+												Controls</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="row tab-content " data-slug="green-jobs">
+								<div class="icon col-sm-1">
+									<img src="images/icon-leaf-white.png" alt="Green Jobs Icon">
+								</div>
+								<div class="text col-sm-11">
+									<p>There is no universal agreement on what constitutes a green job; it is an
+										ever-evolving concept. According to the U.S. Department of Labor's Occupational
+										Information Network (O*NET), a green career can be any occupation that is
+										affected by activities such as conserving energy, developing alternative energy,
+										reducing pollution, or recycling. Many occupations in the world of HVAC/R touch
+										on these activities, some HVAC/R occupations are more obvious than others. The
+										HVAC/R experts involved with the development of the Careers in Climate Control
+										Technology Map chose occupations that could be easily recognized as applying
+										“green” practices on a regular basis.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="map-grid">
+						<div class="point x50-design x20-center y10-high-advanced"
+							data-slug="mechanical-engineer-w-hvac-expertise"
+							data-routes="energy-engineer|facilities-manager|building-automation-systems-engineer|building-automation-systems-manager|project-manager"
+							data-tooltips="Experience in building design, sustainable design and green construction would support this move|Strong leadership skills and knowledge of refrigeration systems and chillers is typically needed|This advance requires extensive knowledge of building automation systems|This move requires excellent leadership skills|Excellent leadership skills would support this advance">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Mechanical Engineer w/HVAC Expertise</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Mechanical Engineer w/HVAC Expertise</div>
+									<p>Mechanical Engineers with HVAC expertise are professionals who specialize in the
+										design of heating, cooling, and refrigeration systems for all types of
+										residential, commercial, and industrial buildings.</p>
+									<a href="https://hvaccareermap.org/jobs/mechanical-engineer-w-hvac-expertise"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x50-design x20-center y30-low-advanced" data-slug="commissioning-specialist"
+							data-routes="project-manager|hvac-instructor|mechanical-engineer-w-hvac-expertise"
+							data-tooltips="Excellent leadership skills would support this advance|A bachelor’s degree is typically needed to advance|This path demands a mechanical engineering degree">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Commissioning Specialist</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Commissioning Specialist</div>
+									<p>Commissioning Specialists test and evaluate the mechanical and/or building
+										automation systems of commercial buildings to ensure these systems operate as
+										designed and constructed, and make recommendations to improve efficiency and
+										system performance.</p>
+									<a href="https://hvaccareermap.org/jobs/commissioning-specialist" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x50-design x10-left y30-low-advanced" data-slug="code-inspector" data-routes
+							data-tooltips>
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Code Inspector</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Code Inspector</div>
+									<p>HVAC/R Code Inspectors conduct a complete review of electrical and mechanical
+										drawings, document applicable codes, and perform inspections on HVAC/R
+										installations to ensure the systems match all drawings and are installed in a
+										safe and workman-like manner.</p>
+									<a href="https://hvaccareermap.org/jobs/code-inspector" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x50-design x30-right y20-mid-advanced" data-slug="energy-engineer" data-routes
+							data-tooltips>
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Energy Engineer</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Energy Engineer</div>
+									<p>Energy Engineers provide technical expertise, energy advice, recommendations and
+										coordination services for companies seeking energy efficiency programs that
+										include: lighting, controls, heating, ventilation, and air conditioning systems
+										for energy efficiency and comfort.</p>
+									<a href="https://hvaccareermap.org/jobs/energy-engineer" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x50-design x10-left y20-mid-advanced" data-slug="hvac-instructor" data-routes
+							data-tooltips>
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">HVAC Instructor</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">HVAC Instructor</div>
+									<p>Instructor in HVAC/R Technology are subject matter experts that provide classroom
+										and laboratory instruction in various HVAC/R courses as part of an approved
+										training and education curriculum, providing a talent pipeline of individuals
+										seeking to work in the HVAC/R Industry.</p>
+									<a href="https://hvaccareermap.org/jobs/hvac-instructor" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x50-design x30-right y10-high-advanced" data-slug="project-manager"
+							data-routes data-tooltips>
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Project Manager</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Project Manager</div>
+									<p>HVAC Project Managers are professionals who oversee the design, planning, and
+										installation of heating, ventiliation, and air conditioning systems in new
+										construction or existing buildings.</p>
+									<a href="https://hvaccareermap.org/jobs/project-manager" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x40-controls x20-center y10-high-advanced"
+							data-slug="building-automation-systems-manager" data-routes="commercial-contractor"
+							data-tooltips="This move requires obtaining state licensing">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Building Automation Systems Manager</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Building Automation Systems Manager</div>
+									<p>Building Automation Systems Managers have the overall responsibility of operating
+										and managing a building’s automation system. They work alongside system
+										engineers, programmers, field technicians, subcontractors and other building
+										personnel.</p>
+									<a href="https://hvaccareermap.org/jobs/building-automation-systems-manager"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x50-design x20-center y80-mid-entry" data-slug="cad-assistant"
+							data-routes="mechanical-engineer-w-hvac-expertise|controls-installer|building-automated-systems-trainee"
+							data-tooltips="This path demands a mechanical engineering degree and significant experience|Post-secondary training or 1-2 years of experience would support this move|This advancement would typically require additional post-secondary training">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">CAD Assistant</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">CAD Assistant</div>
+									<p>CAD Assistants use computer-aided design software and work with Lead Drafters to
+										create designs and schematics used to manufacture products or construct
+										buildings. Cad Assistants may specialize in many areas including mechanical,
+										electrical and civil drafting.</p>
+									<a href="https://hvaccareermap.org/jobs/cad-assistant" class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x50-design x10-left y40-high-midlevel" data-slug="test-and-balance-technician"
+							data-routes="commercial-service-technician|building-automated-systems-technician|energy-analyst|commissioning-specialist"
+							data-tooltips="This advance most often requires excellent customer service skills|A degree in Building Automation Systems Technology is typically required|This advancement typically requires an engineering degree or bachelor’s degree in a related field|This move requires a bachelor's degree in engineering or significant HVAC/R experience">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Test & Balance Technician</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Test & Balance Technician</div>
+									<p>Test and Balance Technicians use specialized tools and test equipment to inspect,
+										test, adjust, and balance heating, cooling, and ventilating systems in
+										residential, commercial, and industrial buildings to achieve performance
+										standards specified in the design of the system.</p>
+									<a href="https://hvaccareermap.org/jobs/test-and-balance-technician"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x50-design x30-right y30-low-advanced" data-slug="energy-analyst"
+							data-routes="commissioning-specialist|energy-engineer"
+							data-tooltips="More HVAC/R experience would support this move|Experience in building design, sustainable design and green construction would support this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Energy Analyst</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Energy Analyst</div>
+									<p>Energy Analysts develop and maintain a high-level understanding of energy markets
+										by locating, gathering, and analyzing energy data, and they work in a variety of
+										positions including at engineering firms specializing in building efficiency.
+									</p>
+									<a href="https://hvaccareermap.org/jobs/energy-analyst" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x40-controls x20-center y40-high-midlevel"
+							data-slug="building-automated-systems-technician"
+							data-routes="energy-analyst|commercial-service-technician|hvac-instructor|customer-sales-representative-and-estimator|equipment-manufacturer-representative|stationary-engineer|test-and-balance-technician|commissioning-specialist|senior-operations-systems-analyst"
+							data-tooltips="This advancement typically requires an engineering degree or bachelor’s degree in a related field|Excellent customer service skills would support this move|A bachelor’s, or in some cases an associate's degree, and HVAC/R experience is needed to advance|Sales experience and excellent customer service skills would facilitate this advancement|This advancement requires specialized manufacturer training|Additional HVAC/R experience would support this move|This advancement might require additional Certification|This move requires a bachelor's degree in engineering or significant HVAC/R experience|The move requires a bachelor’s degree, or an associate’s degree with specialized training">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Building Automation Systems Technician</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Building Automation Systems Technician</div>
+									<p>Building Automation Systems Technicians install, repair, and maintain
+										computer-based control systems that control and monitor a building's mechanical
+										and electrical equipment including heating, ventilation, and air conditioning
+										(HVAC), and energy management systems.</p>
+									<a href="https://hvaccareermap.org/jobs/building-automated-systems-technician"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x40-controls x30-right y30-low-advanced"
+							data-slug="senior-operations-systems-analyst"
+							data-routes="commissioning-specialist|building-automation-systems-manager|energy-analyst|customer-sales-representative-and-estimator|equipment-manufacturer-representative|project-manager|stationary-engineer|hvac-instructor|building-automation-systems-engineer"
+							data-tooltips="Significant HVAC/R experience would support this move|This advance requires extensive knowledge of building automation systems|This advancement typically requires an engineering degree or bachelor’s degree in a related field|Sales experience and excellent customer service skills would facilitate this advancement|This advancement requires specialized manufacturer training|Excellent leadership skills would support this advance|Additional HVAC/R experience would support this move|A bachelor’s degree is typically needed to advance|This move requires a bachelor’s degree and/or significant HVAC/R experience">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Senior Operations Systems Analyst</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Senior Operations Systems Analyst</div>
+									<p>Senior Operations Systems Analysts play a key role in the design, installation,
+										and implementation of all technical aspects of Building Automation Systems and
+										are responsible for assessment and analysis of a building’s control system to
+										ensure system optimization.</p>
+									<a href="https://hvaccareermap.org/jobs/senior-operations-systems-analyst"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x40-controls x10-left y20-mid-advanced"
+							data-slug="building-automation-systems-engineer"
+							data-routes="mechanical-engineer-w-hvac-expertise|energy-engineer|hvac-instructor|project-manager|building-automation-systems-manager"
+							data-tooltips="This path demands a mechanical engineering degree|A bachelor’s degree in Mechanical Engineering with HVAC/R expertise, or related field is needed|A bachelor’s degree is typically needed to advance|Excellent leadership skills would support this advance|This advance requires extensive knowledge of building automation systems">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Building Automation Systems Engineer</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Building Automation Systems Engineer</div>
+									<p>Building Automation Systems Engineers supervise the installation and maintenance
+										of building automation systems that create centralized controls for such
+										features as a building’s lighting system, heating and cooling system, and water
+										heating system.</p>
+									<a href="https://hvaccareermap.org/jobs/building-automation-systems-engineer"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x30-sales x10-left y30-low-advanced"
+							data-slug="equipment-manufacturer-representative"
+							data-routes="senior-operations-systems-analyst|building-automation-systems-engineer|hvac-instructor|sales-marketing-manager"
+							data-tooltips="The move typically requires a bachelor’s degree or an associate’s degree with specialized training|This move requires a bachelor’s degree and/or significant HVAC/R experience|A bachelor’s, or in some cases an associate's degree, and HVAC/R experience is needed to advance|This advance will likely require a bachelor’s degree and/or significant HVAC/R and sales experience">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Equipment Manufacturer Representative</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Equipment Manufacturer Representative</div>
+									<p>As a manufacturer’s representative that specializes in HVAC related products,
+										these individuals become an expert in a specific product line and provides
+										product, equipment and solutions based on customer needs.</p>
+									<a href="https://hvaccareermap.org/jobs/equipment-manufacturer-representative"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x30-sales x30-right y10-high-advanced" data-slug="sales-marketing-manager"
+							data-routes data-tooltips>
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Sales & Marketing Manager</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Sales & Marketing Manager</div>
+									<p>Sales & Marketing Managers manage a team of sales representatives with the goal
+										of increasing sales in their assigned territory through growth and development
+										of existing customers and developing relationships with new customers.</p>
+									<a href="https://hvaccareermap.org/jobs/sales-marketing-manager" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x40-controls x30-right y70-high-entry" data-slug="controls-installer"
+							data-routes="test-and-balance-technician|apprentice|building-automated-systems-trainee"
+							data-tooltips="This move would require specialized training and certification|No additional experience is needed for this advancement|This advancement would typically require additional experience or some post-secondary training">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Controls Installer</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Controls Installer</div>
+									<p>Controls Installers assist with the installation of conduit, wire, cable,
+										equipment, components and devices associated with energy management systems
+										including electric/electronic controls, devices, panels, sensors, and
+										components.</p>
+									<a href="https://hvaccareermap.org/jobs/controls-installer" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x40-controls x30-right y50-mid-midlevel"
+							data-slug="building-automated-systems-trainee"
+							data-routes="test-and-balance-technician|building-automated-systems-technician"
+							data-tooltips="This move would require specialized training and certification|A degree in Building Automation Systems Technology is typically required">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Building Automation Systems Trainee</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Building Automation Systems Trainee</div>
+									<p>Working under the supervision of a Building Automations Systems Technician, the
+										Trainee utilizes their previous knowledge and experience of HVAC/R and
+										electrical systems of buildings, to install, troubleshoot, and commission
+										Building Automation Systems.</p>
+									<a href="https://hvaccareermap.org/jobs/building-automated-systems-trainee"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x30-sales x30-right y90-low-entry" data-slug="warehouse-associate"
+							data-routes="wholesale-counter-sales|tradesperson|residential-trainee|residential-installer|commercial-trainee"
+							data-tooltips="This advance most often requires excellent customer service skills.|Possessing 1-2 years of trade experience would help facilitate this move.|No additional experience is needed for this advancement.|This advance typically requires 1-2 years of experience and HVAC/R Certifications.|No additional experience is needed for this advancement">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Warehouse Associate</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Warehouse Associate</div>
+									<p>Warehouse Associates receive and verify incoming shipping orders, stock shelves
+										and pull and prepare HVAC/R equipment and components for shipment. This is an
+										excellent position to learn about the HVAC/R industry.</p>
+									<a href="https://hvaccareermap.org/jobs/warehouse-associate" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x30-sales x30-right y60-low-midlevel" data-slug="wholesale-counter-sales"
+							data-routes="tradesperson|building-automated-systems-trainee|controls-installer|residential-installer|customer-sales-representative-and-estimator|sales-marketing-associate"
+							data-tooltips="Possessing 1-2 years of trade experience would help facilitate this move|This advancement would require additional post-secondary training|Post-secondary training or 1-2 years of experience would support this move|This advance typically requires 1-2 years of experience and HVAC/R Certifications|Sales and HVAC/R experience would support this move|Being highly motivated and a self-starter would facilitate this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Wholesale Counter Sales</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Wholesale Counter Sales</div>
+									<p>Wholesale Counter Sales Associates provide quality customer service at the
+										counter level, including writing and processing orders, answering questions on
+										products, relaying pertinent order information to customers, and coordinating
+										with other departments and manufacturers when necessary.</p>
+									<a href="https://hvaccareermap.org/jobs/wholesale-counter-sales" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x30-sales x20-center y50-mid-midlevel" data-slug="sales-marketing-associate"
+							data-routes="building-automated-systems-trainee|equipment-manufacturer-representative|customer-sales-representative-and-estimator"
+							data-tooltips="This advancement would require additional post-secondary training|This advancement requires specialized manufacturer training|Additional experience would facilitate this advancement">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Sales & Marketing Associate</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Sales & Marketing Associate</div>
+									<p>Mostly an inside sales position, Sales & Marketing Associates support current
+										customer accounts, ensure purchase orders are shipped and received, develop a
+										new customer base, and analyze sales trends on current and new customers while
+										providing excellent customer service. </p>
+									<a href="https://hvaccareermap.org/jobs/sales-marketing-associate"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x30-sales x30-right y40-high-midlevel"
+							data-slug="customer-sales-representative-and-estimator"
+							data-routes="service-dispatcher|building-automated-systems-trainee|sales-marketing-manager|equipment-manufacturer-representative"
+							data-tooltips="No additional experience is needed for this advancement|This advancement would require additional post-secondary training|This advance will likely require a bachelor’s degree and/or significant HVAC/R and sales experience|This advancement requires specialized manufacturer training">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Customer Sales Representative and Estimator</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Customer Sales Representative and Estimator</div>
+									<p>Customer Sales Representatives & Estimators build strong relationships with
+										potential and existing customers in order to sell product. They visit job sites
+										and prepare quotes based on customers' needs.</p>
+									<a href="https://hvaccareermap.org/jobs/customer-sales-representative-and-estimator"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x10-left y30-low-advanced" data-slug="stationary-engineer"
+							data-routes="energy-analyst|commissioning-specialist|code-inspector|project-manager|test-and-balance-technician|building-automated-systems-technician"
+							data-tooltips="A Bachelor's Degree in Engineering or related field and in-depth knowledge of HVAC/R is required|This move requires a Bachelor's Degree in Engineering or significant HVAC/R experience|Certification and licensing in most likely needed to advance here|This advance will likely require a bachelor’s degree and/or significant HVAC/R experience|This advancement may require specialized training and certification|A degree in Building Automation Systems Technology would support this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Stationary Engineer</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Stationary Engineer</div>
+									<p>Stationary Engineers operate, maintain, renovate and repair boiler systems and
+										all other mechanical systems in a facility. This equipment is similar to that
+										used on trains and ships but the equipment is stationary, rather than mobile.
+									</p>
+									<a href="https://hvaccareermap.org/jobs/stationary-engineer" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x10-left y20-mid-advanced"
+							data-slug="commercial-service-manager"
+							data-routes="equipment-manufacturer-representative|commissioning-specialist|energy-analyst|project-manager|facilities-manager|commercial-contractor"
+							data-tooltips="This advancement requires specialized manufacturer training|This move requires a Bachelor's Degree in Engineering or significant HVAC/R experience|A Bachelor's Degree in Engineering or related field and in-depth knowledge of HVAC/R is required|This advance will likely require a bachelor’s degree and/or significant HVAC/R experience|This move typically requires post-secondary training and strong management skills|This move requires significant experience and obtaining state licensing">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Commercial Service Manager</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Commercial Service Manager</div>
+									<p>Commercial Service Managers supervise and support all building operators and HVAC
+										field personnel who perform installation, maintenance, and repairs, as well as
+										office personnel, to ensure customers are provided with superior quality
+										service.<br></p>
+									<a href="https://hvaccareermap.org/jobs/commercial-service-manager"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x10-left y10-high-advanced" data-slug="commercial-contractor"
+							data-routes="residential-contractor"
+							data-tooltips="An additional Class C license might be required">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Commercial Contractor</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Commercial Contractor</div>
+									<p>HVAC/R Commercial Contractors are individuals who start their own business
+										fabricating, installing, maintaining, servicing, and repairing HVAC/R systems in
+										commercial and industrial settings. They work alone or hire employees to help
+										operate the business.</p>
+									<a href="https://hvaccareermap.org/jobs/commercial-contractor" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x20-center y10-high-advanced" data-slug="facilities-manager"
+							data-routes data-tooltips>
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Facilities Manager</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Facilities Manager</div>
+									<p>Facilities Managers provide overall direction, coordination and supervision for
+										organizing, planning, scheduling and implementing activities for maintenance,
+										and operations for the building systems.</p>
+									<a href="https://hvaccareermap.org/jobs/facilities-manager" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x20-center y50-mid-midlevel"
+							data-slug="cooking-equipment-service-technician"
+							data-routes="wholesale-counter-sales|sales-marketing-associate|commercial-service-manager|equipment-manufacturer-representative|customer-sales-representative-and-estimator|stationary-engineer|commercial-service-technician"
+							data-tooltips="Excellent customer skills would support this advancement|Being highly motivated and a self-starter would facilitate this move|Strong knowledge of HVAC/R and leadership and management skills would facilitate this move|This advancement requires specialized training and excellent customer service skills|Post-secondary training and sales experience would support this move|This move requires post-secondary training|This advancement may require additional experience">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Cooking Equipment Service Technician</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Cooking Equipment Service Technician</div>
+									<p>Cooking Equipment Service Technicians provide customer service in the field to
+										troubleshoot, diagnose, and repair commercial cooking, refrigeration and/or HVAC
+										equipment.</p>
+									<a href="https://hvaccareermap.org/jobs/cooking-equipment-service-technician"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x10-left y40-high-midlevel"
+							data-slug="commercial-service-technician"
+							data-routes="equipment-manufacturer-representative|residential-service-manager|test-and-balance-technician|building-automated-systems-technician|customer-sales-representative-and-estimator|sales-marketing-associate|wholesale-counter-sales|stationary-engineer|journey-level-hvac-technician|journey-level-refrigeration-technician|commercial-service-manager"
+							data-tooltips="This advancement requires specialized training and excellent customer service skills|This move likely entails additional experience and leadership and management skills|This advancement may require specialized training and certification|A degree in Building Automation Systems Technology would support this move|Post-secondary training and sales experience would support this move|Being highly motivated and a self-starter would facilitate this move|Excellent customer skills would support this advancement|This advancement requires post-secondary training|This move requires completion of an approved HVAC/R apprenticeship or equivalent|This move requires completion of an approved HVAC/R apprenticeship or equivalent|Strong knowledge of HVAC/R and strong leadership and management skills would facilitate this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Commercial Service Technician</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Commercial Service Technician</div>
+									<p>Commercial Service Technicians provide customer service in the field to
+										troubleshoot, diagnose, and repair refrigeration and/or HVAC equipment in
+										commercial buildings. While they are sometimes trained on specific systems,
+										these technicians are usually generalists trained to work on many HVAC/R
+										systems.</p>
+									<a href="https://hvaccareermap.org/jobs/commercial-service-technician"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x30-right y30-low-advanced"
+							data-slug="journey-level-refrigeration-technician"
+							data-routes="project-manager|mechanical-engineer-w-hvac-expertise|equipment-manufacturer-representative|test-and-balance-technician|building-automated-systems-technician|customer-sales-representative-and-estimator|commercial-service-manager|stationary-engineer"
+							data-tooltips="This advance will likely require a bachelor’s degree and/or significant HVAC/R experience|This path demands a mechanical engineering degree|This advancement requires specialized manufacturer training|This advancement may require specialized training and certification|A degree in Building Automation Systems Technology would support this move|Sales experience would support this move|Strong knowledge of HVAC/R and strong leadership and management skills would facilitate this move|This advancement requires post-secondary training">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Journey-Level Refrigeration Technician</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Journey-Level Refrigeration Technician</div>
+									<p>Upon successful completion of an apprenticeship program, the Journey-Level
+										Refrigeration Technician will install, repair, overhaul and perform preventive
+										maintenance on refrigeration systems of commercial and industrial buildings and
+										manufacturing plants will little or no supervision. </p>
+									<a href="https://hvaccareermap.org/jobs/journey-level-refrigeration-technician"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x20-center y30-low-advanced"
+							data-slug="journey-level-hvac-technician"
+							data-routes="building-automated-systems-technician|project-manager|energy-analyst|commissioning-specialist|code-inspector|equipment-manufacturer-representative|commercial-service-manager|stationary-engineer|test-and-balance-technician"
+							data-tooltips="A degree in Building Automation Systems Technology would support this move.|This advance will likely require a bachelor’s degree and/or significant HVAC/R experience.|A Bachelor's Degree in Engineering or related field and in-depth knowledge of HVAC/R is required.|This move requires a Bachelor's Degree in Engineering or significant HVAC/R experience.|Certification and licensing in most likely needed to advance here.|This advancement requires specialized manufacturer training.|Strong knowledge of HVAC/R and strong leadership and management skills would facilitate this move.|This advancement requires post-secondary training.|This advancement may require specialized training and certification.">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Journey-Level HVAC Technician</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Journey-Level HVAC Technician</div>
+									<p>Upon successful completion of an apprenticeship program, Journey-Level HVAC
+										Technicians install, repair, and maintain HVAC systems with little or no
+										supervision.</p>
+									<a href="https://hvaccareermap.org/jobs/journey-level-hvac-technician"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x30-right y80-mid-entry" data-slug="tradesperson"
+							data-routes="warehouse-associate|residential-service-technician|residential-installer|building-automated-systems-trainee|commericial-installer|apprentice"
+							data-tooltips="This move may require forklift certification|Substantial work experience and/or additional technical training would support this move|Additional training and certification would support this advancement|Substantial work experience and/or additional technical training would support this move|This move involves additional training and certification|Willingness to participate in an approved apprenticeship training program is required for this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Tradesperson</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Tradesperson</div>
+									<p>The Tradesperson is a stage in an HVAC/R career path with progression based on
+										experience, education, and training. Working under the supervision of
+										journey-level technician or lead installer, the Tradesperson assists in the
+										installation and maintenance of HVAC/R equipment.</p>
+									<a href="https://hvaccareermap.org/jobs/tradesperson" class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x10-left y70-high-entry" data-slug="commericial-installer"
+							data-routes="controls-installer|residential-service-technician|facilities-manager|building-automated-systems-trainee|wholesale-counter-sales|apprentice"
+							data-tooltips="Post-secondary training would support this move|Additional experience is required for this advancement|This move typically requires post-secondary training and strong management skills|This move may require building automation system training|This advance most often requires excellent customer service skills|Willingness to participate in an approved apprenticeship training program is required for this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Commercial Installer</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Commercial Installer</div>
+									<p>Commercial Installers work under the supervision of a Lead Installer or
+										Supervisor to install HVAC equipment and/or refrigeration equipment and
+										accessories in commercial buildings.</p>
+									<a href="https://hvaccareermap.org/jobs/commericial-installer" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x30-right y70-high-entry" data-slug="apprentice"
+							data-routes="test-and-balance-technician|cooking-equipment-service-technician|facilities-maintenance-technician|sales-marketing-associate|building-automated-systems-trainee|controls-installer|wholesale-counter-sales|residential-service-technician|journey-level-refrigeration-technician|journey-level-hvac-technician|stationary-engineer|commercial-service-technician"
+							data-tooltips="This advancement may require specialized training and certification|Knowledge of commercial cooking equipment would support this move|Experience using a computerized maintenance management system would help facilitate this move|This advance requires someone to be highly motivated and a self-starter|Post-secondary training would support this move|Knowledge of building automation systems would support this move|This advance most often requires excellent customer service skills|This advance most often requires excellent customer service skills|This move requires completion of an approved HVAC/R apprenticeship|This move requires completion of an approved HVAC/R apprenticeship|Additional training would support this advancement|This advance most often requires excellent customer service skills and additional experience">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Apprentice</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Apprentice</div>
+									<p>The HVAC/R Apprentice position allows individuals to learn the skills required of
+										the commercial HVAC/R installation and service trade while working in a
+										full-time paid employment position with on-the-job training from experienced
+										HVAC journey-level technicians as well as company-provided structured
+										apprenticeship training classes.</p>
+									<a href="https://hvaccareermap.org/jobs/apprentice" class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x30-right y60-low-midlevel"
+							data-slug="facilities-maintenance-technician"
+							data-routes="cooking-equipment-service-technician|building-automated-systems-trainee|customer-sales-representative-and-estimator|commercial-service-technician|stationary-engineer|test-and-balance-technician|wholesale-counter-sales|sales-marketing-associate"
+							data-tooltips="Knowledge of commercial cooking equipment would support this move|This advancement may require additional training|Post-secondary training and sales experience would support this move|Additional experience would likely support this move|Post-secondary training and additional experience would likely support this advancement|This advancement may require specialized training and certification|This advance most often requires excellent customer service skills|Being highly motivated and possessing 1-2 years of sales experience would facilitate this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Facilities Maintenance Technician</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Facilities Maintenance Technician</div>
+									<p>A Facilities Maintenance Technician is responsible for a variety of issues and
+										related improvements of a building’s HVAC/R and plumbing systems, with an
+										emphasis on performing preventative, predictive and unscheduled maintenance as
+										needed.</p>
+									<a href="https://hvaccareermap.org/jobs/facilities-maintenance-technician"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x20-commercial x20-center y90-low-entry" data-slug="commercial-trainee"
+							data-routes="tradesperson|warehouse-associate|residential-trainee|building-automated-systems-trainee"
+							data-tooltips="Post-secondary training would support this move|Forklift Certification would help expedite this advancement|No additional experience is needed for this advancement|Substantial work experience and/or additional technical training would support this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Commercial Trainee</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Commercial Trainee</div>
+									<p>Commercial Trainees assist lead installers and services technicians with the
+										installation and service of various types of commercial HVAC/R equipment and
+										accessories.</p>
+									<a href="https://hvaccareermap.org/jobs/commercial-trainee" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x10-residential x30-right y40-high-midlevel" data-slug="service-dispatcher"
+							data-routes="sales-marketing-associate|customer-sales-representative-and-estimator|equipment-manufacturer-representative|residential-service-manager"
+							data-tooltips="Sales training would support this move|This advance typically requires post-secondary training and 1-2 years of sales experience|Additional post-secondary training and sales experience would support this move|This advance most often requires more HVAC/R experience">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Service Dispatcher</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Service Dispatcher</div>
+									<p>Service Dispatchers manage customer phone calls and organize service calls such
+										that HVAC Technicians can move efficiently from job to job throughout the day.
+									</p>
+									<a href="https://hvaccareermap.org/jobs/service-dispatcher" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x10-residential x20-center y30-low-advanced"
+							data-slug="residential-service-manager"
+							data-routes="commercial-service-manager|equipment-manufacturer-representative|residential-contractor"
+							data-tooltips="This move would require more experience|Technical training would support this move|State licensing is required for this advancement">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Residential Service Manager</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Residential Service Manager</div>
+									<p>Service Managers oversee the technicians that install, repair and maintain
+										heating and air conditioning units in a residential setting, providing guidance
+										and technical expertise, as well as maintaining direct involvement with dispatch
+										personnel to ensure customer satisfaction and company goals are met.</p>
+									<a href="https://hvaccareermap.org/jobs/residential-service-manager"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x10-residential x10-left y10-high-advanced" data-slug="residential-contractor"
+							data-routes="commercial-contractor" data-tooltips="More experience would support this move">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Residential Contractor</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Residential Contractor</div>
+									<p>HVAC Residential Contractors are individuals who start their own business
+										fabricating, installing, maintaining, servicing, and repairing warm air heating
+										systems, heat pumps, ventilating systems, and air conditioning systems.
+										Contractors can work alone or hire employees to help operate the business.</p>
+									<a href="https://hvaccareermap.org/jobs/residential-contractor" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x10-residential x20-center y90-low-entry" data-slug="residential-trainee"
+							data-routes="warehouse-associate|tradesperson|commericial-installer|commercial-trainee|residential-installer"
+							data-tooltips="Forklift Certification would help expedite this advancement|Possessing 1-2 years of trade experience would help facilitate this move|Additional HVAC/R experience and Certifications would support this move|No additional experience is needed for this advancement|This advance typically requires 1-2 years of experience and HVAC/R Certifications">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Residential Trainee</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Residential Trainee</div>
+									<p>Residential Trainees assist lead installers with the installation of various
+										types of residential HVAC equipment and accessories.</p>
+									<a href="https://hvaccareermap.org/jobs/residential-trainee" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x10-residential x10-left y80-mid-entry" data-slug="residential-installer"
+							data-routes="apprentice|residential-service-technician|commericial-installer"
+							data-tooltips="No additional requirements are needed for this move|This advance typically requires 1-3 years experience and HVAC/R Certifications|Additional experience is typically needed for this advancement">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Residential Installer</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Residential Installer</div>
+									<p>HVAC Residential Installers are responsible for installing heating, ventilation,
+										and air conditioning equipment in customers’ homes following manufacturer
+										specifications, industry codes and standards, and company requirements.</p>
+									<a href="https://hvaccareermap.org/jobs/residential-installer" class="button">Job
+										Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+						<div class="point x10-residential x10-left y50-mid-midlevel"
+							data-slug="residential-service-technician"
+							data-routes="apprentice|sales-marketing-associate|wholesale-counter-sales|commercial-service-technician|facilities-maintenance-technician|residential-service-manager|service-dispatcher"
+							data-tooltips="No additional requirements are needed for this advancement|Being highly motivated and possessing 1-2 years of sales experience would facilitate this move|This advancement typically requires more experience and excellent verbal and interpersonal skills|This move will require more experience|Post-secondary training and knowledge of building management systems are likely needed for this move|An in-depth knowledge of HVAC/R and strong customer service skills would facilitate this move.|This advancement demands excellent communication and customer service skills">
+							<a href="#" class="square">
+								<span class="border"></span>
+								<span class="dot"></span>
+							</a>
+							<div class="title">Residential Service Technician</div>
+							<div class="description">
+								<div class="description-screen"></div>
+								<div class="description-box">
+									<div class="description-title">Residential Service Technician</div>
+									<p>Residential Service Technicians diagnose and repair a wide variety of residential
+										heating and air conditioning systems according to company standards, and
+										providing the customer with a high-quality experience while working under
+										minimum or no supervision.</p>
+									<a href="https://hvaccareermap.org/jobs/residential-service-technician"
+										class="button">Job Detail</a>
+									<a href="#" class="close"></a>
+									<div class="arrow"></div>
+									<div class="arrow border"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="map-row">
+						<div class="row-label advanced">
+							<div class="title"><span>Advanced</span></div>
+						</div>
+						<div class="block advanced residential"></div>
+						<div class="block advanced commercial"></div>
+						<div class="block advanced sales"></div>
+						<div class="block advanced controls"></div>
+						<div class="block advanced design"></div>
+					</div>
+					<div class="map-row">
+						<div class="row-label midlevel">
+							<div class="title"><span>Mid-Level</span></div>
+						</div>
+						<div class="block midlevel residential"></div>
+						<div class="block midlevel commercial"></div>
+						<div class="block midlevel sales"></div>
+						<div class="block midlevel controls"></div>
+						<div class="block midlevel design"></div>
+					</div>
+					<div class="map-row">
+						<div class="row-label entry">
+							<div class="title">
+								<span>Entry</span>
+							</div>
+						</div>
+						<div class="block entry residential"></div>
+						<div class="block entry commercial"></div>
+						<div class="block entry sales"></div>
+						<div class="block entry controls"></div>
+						<div class="block entry design"></div>
+					</div>
+					<div class="map-row vert-match">
+						<div class="axis-label">
+							<div class="axis-info tooltipped vert-match-box-1" data-slug="axis-info">
+								<a href="#" class="tooltip-toggle vcenter"><i class="icon icon-help-circle"></i></a>
+								<div class="tooltip">
+									<div class="tooltip-box">
+										<div class="close-float"></div>
+										<p>Along the y-axis, jobs sit at three skill levels: <strong>ENTRY
+												LEVEL</strong> (requiring a high school diploma or equivalent, and no
+											HVAC/R education and HVAC/R work experience); <strong>MID-LEVEL</strong>
+											(requiring a minimum of 1-4 years’ experience with post-secondary training
+											preferred); <strong>ADVANCED</strong> (5+ years’ experience, journey-level
+											training, or bachelor's level education).</p>
+										<p>Along the x-axis, jobs fall into five broad sectors: Residential, Commercial,
+											Sales & Marketing, Automated Controls, and Design & Engineering. There is
+											much overlap and conversation between these linked segments of the Careers
+											in Climate Control Technology (HVAC/R) value chain.</p>
+										<a href="#" class="close"></a>
+										<div class="arrow"></div>
+										<div class="arrow border"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-label residential">
+							<div class="tail left"></div>
+							<div class="tail right"></div>
+							<div class="title vert-match-box-1">
+								<div class="vcenter">Residential</div>
+							</div>
+						</div>
+						<div class="col-label commercial">
+							<div class="tail left"></div>
+							<div class="tail right"></div>
+							<div class="title vert-match-box-1">
+								<div class="vcenter">Commercial</div>
+							</div>
+						</div>
+						<div class="col-label sales">
+							<div class="tail left"></div>
+							<div class="tail right"></div>
+							<div class="title vert-match-box-1">
+								<div class="vcenter">Sales & Marketing</div>
+							</div>
+						</div>
+						<div class="col-label controls">
+							<div class="tail left"></div>
+							<div class="tail right"></div>
+							<div class="title vert-match-box-1">
+								<div class="vcenter">Automated Controls</div>
+							</div>
+						</div>
+						<div class="col-label design">
+							<div class="tail left"></div>
+							<div class="tail right"></div>
+							<div class="title vert-match-box-1">
+								<div class="vcenter">Design & Engineering</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<div class="footer">
+		&nbsp;
+		  
+	   </div>
+
+	
+	<script async src="js/analytics.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/functions.js"></script>
+
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-67630300-3', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script async>
+		(function (s, u, m, o, j, v) {
+			j = u.createElement(m);
+			v = u.getElementsByTagName(m)[0];
+			j.async = 1;
+			j.src = o;
+			j.dataset.sumoSiteId = '2cca18b0894c47e25f998207be16f0318f416ca1259896a8a9930450a36ece3a';
+			v.parentNode.insertBefore(j, v)
+		})(window, document, 'script', '//load.sumo.com/');
+	</script>
+
+</body>
+
+</html>

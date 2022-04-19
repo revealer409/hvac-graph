@@ -1,0 +1,891 @@
+<!--
+    THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=graph
+-->
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+
+  <!-- Uncomment this line if you want to dataTool extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/extension/dataTool.min.js"></script>
+        -->
+  <!-- Uncomment this line if you want to use gl extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+        -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+        -->
+  <!-- Uncomment this line if you want to use map
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/map/js/china.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/map/js/world.js"></script>
+        -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/extension/bmap.min.js"></script>
+        -->
+
+  <script type="text/javascript">
+    /*
+json object:data contains info about nodes and edges
+*/
+    var jsonData = {
+      "nodes": [{
+          "id": "0",
+          "name": "Residential Contractor",
+          "symbolSize": 25,
+          "x": -1100.82776,
+          "y": -50.6904,
+          "value": 2,
+          "category": 0
+        },
+        {
+          "id": "1",
+          "name": "Commercial Contractor",
+          "symbolSize": 25,
+          "x": -950.08344,
+          "y": -50.8853,
+          "value": 4,
+          "category": 1
+        },
+        {
+          "id": "2",
+          "name": "Facilities Manager",
+          "symbolSize": 25,
+          "x": -750.76357,
+          "y": -50.29176,
+          "value": 9.485714,
+          "category": 1
+        },
+        {
+          "id": "3",
+          "name": "Sales & Marketing Manager",
+          "symbolSize": 25,
+          "x": -600.82404,
+          "y": -50.26283,
+          "value": 9.485714,
+          "category": 2
+        },
+        {
+          "id": "4",
+          "name": "Building Automation Systems Manager",
+          "symbolSize": 25,
+          "x": -430.30386,
+          "y": -30.06424,
+          "value": 25,
+          "category": 3
+        },
+        {
+          "id": "5",
+          "name": "Mechanical Engineer w/HVAC Expertise",
+          "symbolSize": 25,
+          "x": -110.26337,
+          "y": -50.03506,
+          "value": 4,
+          "category": 4
+        },
+        {
+          "id": "6",
+          "name": "Project Manager",
+          "symbolSize": 25,
+          "x": -85.6012,
+          "y": -30.16974,
+          "value": 4,
+          "category": 4
+        },
+        {
+          "id": "7",
+          "name": "Energy Engineer",
+          "symbolSize": 25,
+          "x": -82.69568,
+          "y": 15.09113,
+          "value": 4,
+          "category": 4
+        },
+        {
+          "id": "8",
+          "name": "Building Automation Systems Engineer",
+          "symbolSize": 25,
+          "x": -420.384,
+          "y": 10.17325,
+          "value": 4,
+          "category": 3
+        },
+        {
+          "id": "9",
+          "name": "HVAC Instructor",
+          "symbolSize": 25,
+          "x": -170.39832,
+          "y": 18.16772,
+          "value": 4,
+          "category": 4
+        },
+        {
+          "id": "10",
+          "name": "Commercial Service Manager",
+          "symbolSize": 25,
+          "x": -950.34107,
+          "y": -20.56128,
+          "value": 4,
+          "category": 1
+        },
+        {
+          "id": "11",
+          "name": "Equipment Manufacturer Representative",
+          "symbolSize": 25,
+          "x": -205.93029,
+          "y": -120.8120565,
+          "value": 100,
+          "category": 2
+        },
+        {
+          "id": "13",
+          "name": "Commissioning Specialist",
+          "symbolSize": 25,
+          "x": -87.93029,
+          "y": -6.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "14",
+          "name": "Energy Analyst",
+          "symbolSize": 25,
+          "x": -80.93029,
+          "y": 15.8120565,
+          "value": 100,
+          "category": 4
+        },
+        {
+          "id": "15",
+          "name": "Residential Service Manager",
+          "symbolSize": 25,
+          "x": -1000.93029,
+          "y": 10.8120565,
+          "value": 100,
+          "category": 0
+        },
+        {
+          "id": "16",
+          "name": "Stationary Engineer",
+          "symbolSize": 25,
+          "x": -830.93029,
+          "y": 10.8120565,
+          "value": 100,
+          "category": 1
+        }, {
+          "id": "17",
+          "name": "Journey-Level HVAC Technician",
+          "symbolSize": 25,
+          "x": -700.93029,
+          "y": 15.8120565,
+          "value": 100,
+          "category": 1
+        }, {
+          "id": "18",
+          "name": "Journey-Level Refrigeration Technician",
+          "symbolSize": 25,
+          "x": -600.93029,
+          "y": 2.8120565,
+          "value": 100,
+          "category": 1
+        }, {
+          "id": "19",
+          "name": "Equipment Manufacturer Representative",
+          "symbolSize": 25,
+          "x": -500.93029,
+          "y": 20.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "20",
+          "name": "Senior Operations Systems Analyst",
+          "symbolSize": 25,
+          "x": -360.93029,
+          "y": -20.8120565,
+          "value": 100,
+          "category": 3
+        },
+        {
+          "id": "21",
+          "name": "Code Inspector",
+          "symbolSize": 25,
+          "x": -110.93029,
+          "y": 20.8120565,
+          "value": 100,
+          "category": 4
+        },
+        {
+          "id": "22",
+          "name": "Commissioning Specialist",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 4
+        },
+        {
+          "id": "23",
+          "name": "Energy Analyst",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 4
+        },
+        {
+          "id": "24",
+          "name": "Service Dispatcher",
+          "symbolSize": 25,
+          "x": -1075.93029,
+          "y": 40.8120565,
+          "value": 100,
+          "category": 5
+        },
+        {
+          "id": "25",
+          "name": "Commercial Service Technician",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "26",
+          "name": "Customer Sales Representative and Estimator",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "27",
+          "name": "Building Automation Systems Technician",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "28",
+          "name": "Test & Balance Technician",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "29",
+          "name": "Residential Service Technician",
+          "symbolSize": 25,
+          "x": -1060.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 5
+        },
+        {
+          "id": "30",
+          "name": "Cooking Equipment Service Technician",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "31",
+          "name": "Sales & Marketing Associate",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 3
+        },
+        {
+          "id": "32",
+          "name": "Building Automation Systems Trainee",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "33",
+          "name": "Facilities Maintenance Technician",
+          "symbolSize": 25,
+          "x": -175.93029,
+          "y": -4.8120565,
+          "value": 100,
+          "category": 1
+        },
+        {
+          "id": "34",
+          "name": "Wholesale Counter Sales",
+          "symbolSize": 25,
+          "x": -605.93029,
+          "y": 80.8120565,
+          "value": 100,
+          "category": 2
+        }
+      ],
+      "links": [{
+          "source": "0",
+          "target": "1"
+        },
+
+        {
+          "source": "2",
+          "target": "2"
+        },
+        {
+          "source": "3",
+          "target": "3"
+        },
+        {
+          "source": "4",
+          "target": "1"
+        },
+        {
+          "source": "4",
+          "target": "3"
+        },
+        {
+          "source": "5",
+          "target": "6"
+        },
+        {
+          "source": "5",
+          "target": "7"
+        },
+        {
+          "source": "5",
+          "target": "8"
+        },
+        {
+          "source": "8",
+          "target": "1"
+        },
+        {
+          "source": "5",
+          "target": "2"
+        },
+        {
+          "source": "10",
+          "target": "1"
+        },
+        {
+          "source": "10",
+          "target": "2"
+        },
+        {
+          "source": "10",
+          "target": "6"
+        },
+        {
+          "source": "10",
+          "target": "11"
+        },
+        {
+          "source": "10",
+          "target": "13"
+        },
+        {
+          "source": "10",
+          "target": "14"
+        }, {
+          "source": "8",
+          "target": "4"
+        }, {
+          "source": "8",
+          "target": "5"
+        }, {
+          "source": "8",
+          "target": "9"
+        }, {
+          "source": "8",
+          "target": "6"
+        }, {
+          "source": "8",
+          "target": "7"
+        }, {
+          "source": "15",
+          "target": "0"
+        }, {
+          "source": "15",
+          "target": "10"
+        }, {
+          "source": "15",
+          "target": "11"
+        }, {
+          "source": "16",
+          "target": "6"
+        }, {
+          "source": "16",
+          "target": "21"
+        }, {
+          "source": "16",
+          "target": "22"
+        }, {
+          "source": "16",
+          "target": "23"
+        }, {
+          "source": "16",
+          "target": "27"
+        }, {
+          "source": "16",
+          "target": "28"
+        }, {
+          "source": "17",
+          "target": "10"
+        }, {
+          "source": "17",
+          "target": "16"
+        }, {
+          "source": "17",
+          "target": "11"
+        }, {
+          "source": "17",
+          "target": "6"
+        }, {
+          "source": "17",
+          "target": "21"
+        }, {
+          "source": "17",
+          "target": "22"
+        }, {
+          "source": "17",
+          "target": "23"
+        }, {
+          "source": "17",
+          "target": "27"
+        }, {
+          "source": "17",
+          "target": "28"
+        }, {
+          "source": "18",
+          "target": "10"
+        }, {
+          "source": "18",
+          "target": "16"
+        }, {
+          "source": "18",
+          "target": "19"
+        }, {
+          "source": "18",
+          "target": "5"
+        }, {
+          "source": "18",
+          "target": "6"
+        }, {
+          "source": "18",
+          "target": "26"
+        }, {
+          "source": "18",
+          "target": "27"
+        }, {
+          "source": "18",
+          "target": "28"
+        }, {
+          "source": "11",
+          "target": "3"
+        }, {
+          "source": "11",
+          "target": "8"
+        }, {
+          "source": "11",
+          "target": "9"
+        }, {
+          "source": "11",
+          "target": "20"
+        }, {
+          "source": "20",
+          "target": "4"
+        }, {
+          "source": "20",
+          "target": "6"
+        }, {
+          "source": "20",
+          "target": "8"
+        }, {
+          "source": "20",
+          "target": "11"
+        }, {
+          "source": "20",
+          "target": "9"
+        }, {
+          "source": "20",
+          "target": "16"
+        }, {
+          "source": "20",
+          "target": "22"
+        }, {
+          "source": "20",
+          "target": "23"
+        }, {
+          "source": "20",
+          "target": "26"
+        }, {
+          "source": "13",
+          "target": "5"
+        }, {
+          "source": "13",
+          "target": "6"
+        }, {
+          "source": "13",
+          "target": "9"
+        }, {
+          "source": "14",
+          "target": "13"
+        }, {
+          "source": "14",
+          "target": "7"
+        }, {
+          "source": "24",
+          "target": "15"
+        }, {
+          "source": "24",
+          "target": "19"
+        }, {
+          "source": "24",
+          "target": "26"
+        }, {
+          "source": "24",
+          "target": "31"
+        }, {
+          "source": "25",
+          "target": "10"
+        }, {
+          "source": "25",
+          "target": "15"
+        }, {
+          "source": "25",
+          "target": "16"
+        }, {
+          "source": "25",
+          "target": "17"
+        }, {
+          "source": "25",
+          "target": "18"
+        }, {
+          "source": "25",
+          "target": "19"
+        }, {
+          "source": "25",
+          "target": "26"
+        }, {
+          "source": "25",
+          "target": "27"
+        }, {
+          "source": "25",
+          "target": "28"
+        }, {
+          "source": "25",
+          "target": "31"
+        }, {
+          "source": "25",
+          "target": "34"
+        }, {
+          "source": "26",
+          "target": "3"
+        }, {
+          "source": "26",
+          "target": "12"
+        }, {
+          "source": "26",
+          "target": "24"
+        }, {
+          "source": "26",
+          "target": "32"
+        }, {
+          "source": "27",
+          "target": "9"
+        }, {
+          "source": "27",
+          "target": "16"
+        }, {
+          "source": "27",
+          "target": "19"
+        }, {
+          "source": "27",
+          "target": "20"
+        }, {
+          "source": "27",
+          "target": "22"
+        }, {
+          "source": "27",
+          "target": "23"
+        }, {
+          "source": "27",
+          "target": "25"
+        }, {
+          "source": "27",
+          "target": "26"
+        }, {
+          "source": "27",
+          "target": "28"
+        }, {
+          "source": "28",
+          "target": "13"
+        }, {
+          "source": "28",
+          "target": "23"
+        }, {
+          "source": "28",
+          "target": "25"
+        }, {
+          "source": "28",
+          "target": "27"
+        }, {
+          "source": "29",
+          "target": "10"
+        }, {
+          "source": "29",
+          "target": "24"
+        }, {
+          "source": "29",
+          "target": "25"
+        }, {
+          "source": "29",
+          "target": "31"
+        }, {
+          "source": "29",
+          "target": "33"
+        }, {
+          "source": "30",
+          "target": "10"
+        }, {
+          "source": "30",
+          "target": "16"
+        }, {
+          "source": "30",
+          "target": "19"
+        }, {
+          "source": "30",
+          "target": "25"
+        }, {
+          "source": "30",
+          "target": "26"
+        }, {
+          "source": "30",
+          "target": "31"
+        }, {
+          "source": "30",
+          "target": "34"
+        }, {
+          "source": "31",
+          "target": "19"
+        }, {
+          "source": "31",
+          "target": "26"
+        }, {
+          "source": "31",
+          "target": "32"
+        }, {
+          "source": "32",
+          "target": "20"
+        }, {
+          "source": "32",
+          "target": "27"
+        }, {
+          "source": "32",
+          "target": "28"
+        }, {
+          "source": "33",
+          "target": "16"
+        }, {
+          "source": "33",
+          "target": "25"
+        }, {
+          "source": "33",
+          "target": "26"
+        }, {
+          "source": "33",
+          "target": "28"
+        }, {
+          "source": "33",
+          "target": "30"
+        }, {
+          "source": "33",
+          "target": "31"
+        }, {
+          "source": "33",
+          "target": "32"
+        }, {
+          "source": "33",
+          "target": "34"
+        }, {
+          "source": "34",
+          "target": "26"
+        }, {
+          "source": "34",
+          "target": "31"
+        }, {
+          "source": "34",
+          "target": "32"
+        }
+      ],
+      "categories": [{
+          "name": "A"
+        },
+        {
+          "name": "B"
+        },
+        {
+          "name": "C"
+        },
+        {
+          "name": "D"
+        },
+        {
+          "name": "E"
+        },
+        {
+          "name": "F"
+        },
+        {
+          "name": "G"
+        },
+        {
+          "name": "H"
+        },
+        {
+          "name": "I"
+        }
+      ]
+    };
+    //jsonData ended
+
+
+    /* graph stats here!*/
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+
+    var option;
+
+    var ROOT_PATH = 'https://cdn.jsdelivr.net/gh/apache/echarts-website@asf-site/examples'
+
+    myChart.showLoading();
+
+    function initGraph(graph) {
+      //$.getJSON(ROOT_PATH + '/data/asset/data/les-miserables.json', function (graph) {
+      myChart.hideLoading();
+      graph.nodes.forEach(function (node) {
+        node.label = {
+          show: node.symbolSize > 30
+        };
+      });
+
+      option = {
+        show: false,
+        title: {
+          text: '',
+          subtext: '',
+          top: 'bottom',
+          left: 'right'
+        },
+        tooltip: {
+          triggerOn:'click',
+          hideDelay: 350000
+        },
+        legend: [{
+          // selectedMode: 'single',
+          data: graph.categories.map(function (a) {
+            return a.name;
+          })
+        }],
+        animationDuration: 1500,
+        animationEasingUpdate: 'quinticInOut',
+        // animationEasingUpdate: 'linear',
+        series: [{
+          name: '',
+          type: 'graph',
+          layout: 'none',
+          data: graph.nodes,
+          //links:graph.links,
+        
+          categories: graph.categories,
+          roam: true,
+          label: {
+            position: 'right',
+            formatter: '{b}'
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.3,
+            width: 2
+          },
+          emphasis: {
+            focus: 'adjacency',
+            lineStyle: {
+              width: 10
+            }
+          }
+        }]
+      };
+      myChart.setOption(option);
+    }
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+//custom onClick event for showing adjecent edges/links
+    myChart.on('click', function (params) {
+     
+      //filtering links from json Data
+      var links = $(jsonData.links).filter(function (i, n) {
+        return n.source === params.data.id
+      });
+
+      myChart.setOption({
+        
+        series: [{
+          links: links,
+        }]
+
+      });
+
+    });
+
+    // myChart.on('legendselectchanged', function (params) {
+    //     console.log(params);
+    // });
+
+//set custom colors for categories, nodes and links.
+    myChart.setOption({
+      color: [
+        '#008dcf',
+        '#0a46c2',
+        '#401d7f',
+        '#c00225',
+        '#f23200',
+        '#24a3d9',
+        '#3767ce',
+        '#cc344c',
+        '#f4572b',
+      ]
+
+    });
+
+    $(document).ready(function () {
+      
+      initGraph(jsonData);
+
+    });
+  </script>
+</body>
+
+</html>

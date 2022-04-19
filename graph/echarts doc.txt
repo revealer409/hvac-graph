@@ -1,0 +1,5 @@
+https://echarts.apache.org/en/option.html#grid.tooltip.textStyle
+
+
+//tooltip
+https://www.programmerall.com/article/93152306862/
